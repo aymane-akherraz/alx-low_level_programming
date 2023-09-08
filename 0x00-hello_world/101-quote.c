@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <string.h>
 /**
- * main - Entry point
+ * main - Prints some text followed by a new line, to the standard error.
  *
- * Return: Always 0 (Success)
+ * Return: Always 1 (Failure)
  */
 int main(void)
 {
