@@ -1,3 +1,4 @@
+#include <unistd.h>
 /**
  * _abs - Computes the absolute value of an integer.
  * @n: is the number to be checked
