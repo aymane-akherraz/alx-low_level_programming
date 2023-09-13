@@ -7,16 +7,16 @@
 */
 int main(void)
 {
-	double a = 1, b = 2;
+	unsigned long int a = 1, b = 2;
 	int c = 2;
 
-	printf("%0.f", a);
-	printf(", %0.f", b);
+	printf("%lu", a);
+	printf(", %lu", b);
 	while (c < 98)
 	{
 		b += a;
 		a = b - a;
-		printf(", %0.f", b);
+		printf(", %lu", b);
 		c++;
 	}
 	printf("\n");
