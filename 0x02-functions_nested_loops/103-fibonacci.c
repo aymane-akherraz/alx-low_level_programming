@@ -12,11 +12,11 @@ int main(void)
 
 	while (b < 4000000)
 	{
-		b += a;
-		a = b - a;
-
 		if (b % 2 == 0)
 			s += b;
+
+		b += a;
+		a = b - a;
 	}
 	printf("%ld\n", s);
 	return (0);
