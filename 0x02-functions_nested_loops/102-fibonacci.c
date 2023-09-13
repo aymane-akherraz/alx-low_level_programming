@@ -7,21 +7,21 @@
 */
 int main(void)
 {
-	long int i = 3;
-	long int a = 1;
-	long int b = 2;
+	long long int i = 3;
+	long long int a = 1;
+	long long int b = 2;
 	int c = 2;
 
-	printf("%ld, ", a);
-	printf("%ld, ", b);
+	printf("%lld, ", a);
+	printf("%lld, ", b);
 	while (c < 50)
 	{
 		if (i == (a + b))
 		{
 			if (c == 49)
-				printf("%ld", i);
+				printf("%lld", i);
 			else
-				printf("%ld, ", i);
+				printf("%lld, ", i);
 			c++;
 			a = b;
 			b = i;
