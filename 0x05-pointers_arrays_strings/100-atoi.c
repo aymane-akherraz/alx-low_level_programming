@@ -7,7 +7,7 @@
 
 int _atoi(char *s)
 {
-	int i, j, n = 0, c = 0, no_dgs = 0, dg;
+	int i, n = 0, c = 0, no_dgs = 0, dg;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
@@ -28,8 +28,7 @@ int _atoi(char *s)
 
 			if (s[i + 1] < '0' || s[i + 1] > '9')
 				break;
-		} else
-			no_dgs == 0;
+		}
 	}
 	if (no_dgs == 0)
 		return (0);
