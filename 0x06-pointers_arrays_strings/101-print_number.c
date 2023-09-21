@@ -6,22 +6,22 @@
 
 void print_number(int n)
 {
-	unsigned int t;
+	unsigned int d;
 
 	if (n < 0)
 	{
-		t = -n;
 		_putchar('-');
+		d = -n;
 	}
 	else
-		t = n;
+		d = n;
 
 	if (n != 0)
 	{
-		if (t / 10 != 0)
-			print_number(t / 10);
+		if (d / 10 != 0)
+			print_number(d / 10);
 
-		_putchar((t % 10) + '0');
+		_putchar((d % 10) + '0');
 	}
 	else
 		_putchar('0');
