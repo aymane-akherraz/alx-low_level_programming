@@ -1,27 +1,4 @@
-#include "main.h"
-
-/**
- * rev_string - Reverses a string.
- * @s: A pointer to the given string
-*/
-
-void rev_string(char *s)
-{
-	int j = 0, len = 0, i;
-	char tmp;
-
-	while (s[j] != '\0')
-		j++;
-
-	len = j - 1;
-
-	for (i = 0; i < (j / 2); i++)
-	}
-		tmp = s[i];
-		s[i] = s[len];
-		s[len--] = tmp;
-	}
-}
+void rev_string(char *s);
 
 /**
  * infinite_add - Adds two numbers.
@@ -93,4 +70,27 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 
 	rev_string(r);
 	return (r);
+}
+
+/**
+ * rev_string - Reverses a string.
+ * @s: A pointer to the given string
+*/
+
+void rev_string(char *s)
+{
+	int j = 0, len = 0, i;
+	char tmp;
+
+	while (s[j] != '\0')
+		j++;
+
+	len = j - 1;
+
+	for (i = 0; i < (j / 2); i++)
+	{
+		tmp = s[i];
+		s[i] = s[len];
+		s[len--] = tmp;
+	}
 }
