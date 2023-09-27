@@ -1,10 +1,4 @@
 # C - Hello, World :
-In this Project we'll cover the following concepts :
-
-* gcc
-* printf
-* puts
-* putchar
 
 | Filename | Description |
 | --- | --- |
