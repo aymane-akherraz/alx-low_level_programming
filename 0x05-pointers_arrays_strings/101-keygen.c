@@ -9,15 +9,16 @@
 
 int main(void)
 {
-	int lower = 32, upper = 126, count = 10;
 	int c, i;
+	int count = 50;
 
 	srand(time(NULL));
 
 	for (i = 0; i < count; i++)
 	{
-		c = (rand() % (upper - lower + 1)) + lower;
+		c = (rand() % 127);
 		_putchar(c);
 	}
+	_putchar(127);
 	return (0);
 }
