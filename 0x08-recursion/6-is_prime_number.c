@@ -29,7 +29,7 @@ int is_prime(int n, int d)
 		if (n % d == 0)
 			return (0);
 
-		is_prime(n, ++d);
+		return (is_prime(n, ++d));
 	}
 	else if (n == d)
 		return (1);
