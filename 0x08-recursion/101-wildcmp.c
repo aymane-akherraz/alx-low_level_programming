@@ -44,6 +44,9 @@ int cmp(char *s1, char *s2, int cs)
 		if (*s1 == '\0' && *s2 == '\0')
 			return (1);
 
+		if (*(s1 + 1) != '\0' && *(s2 + 1) == '\0')
+			return (cmp((s1 + 1), s2, cs));
+
 		return (cmp((s1 + 1), (s2 + 1), cs));
 	}
 }
