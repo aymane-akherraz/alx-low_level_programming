@@ -11,7 +11,7 @@
 char *create_array(unsigned int size, char c)
 {
 	char *s;
-	int i;
+	unsigned int i;
 
 	if (size)
 	{
@@ -19,7 +19,7 @@ char *create_array(unsigned int size, char c)
 		if (s != NULL)
 		{
 			for (i = 0; i < size; i++)
-				s[i] = 'H';
+				s[i] = c;
 			return (s);
 		}
 	}

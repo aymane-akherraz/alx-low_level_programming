@@ -11,9 +11,9 @@ void fill_arr(char *str, char **s, int h);
 char **strtow(char *str)
 {
 	char **s;
-	int i, j, k, h, w;
+	int i, j, h, w;
 
-	if (str == NULL || str == "")
+	if (str == NULL)
 		return (NULL);
 
 	h = 0;
