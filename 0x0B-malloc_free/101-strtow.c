@@ -23,8 +23,11 @@ char **strtow(char *str)
 	h = 0;
 	for (i = 0; i <= l; i++)
 	{
-		if (str[i] == ' ' || str[i] == '\0' && str[i - 1] > ' ' && str[i - 1] <= '~')
-			h++;
+		if (str[i] == ' ' || str[i] == '\0')
+		{
+			if (str[i - 1] > ' ' && str[i - 1] <= '~')
+				h++;
+		}
 	}
 	s = malloc(sizeof(char *) * (h + 1));
 
