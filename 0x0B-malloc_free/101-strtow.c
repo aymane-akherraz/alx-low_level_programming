@@ -14,11 +14,12 @@ char **strtow(char *str)
 	char **s;
 	int i, j, l, h, w;
 
-	if (str == NULL || *str == '\0' || *str == ' ')
-		return (NULL);
 	l = 0;
 	while (str[l] != '\0')
 		l++;
+
+	if (str == NULL || l == 0 || (*str == ' ' && l == 1))
+		return (NULL);
 
 	h = 0;
 	for (i = 0; i <= l; i++)
