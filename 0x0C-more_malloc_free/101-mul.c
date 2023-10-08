@@ -1,5 +1,4 @@
 #include <stdlib.h>
-#include <unistd.h>
 
 int _isdigit(int c);
 int _strlen(char *s);
@@ -8,7 +7,6 @@ void mul(char *n1, char *n2, int l1, int l2);
 int **alloc_grid(int width, int height);
 void free_grid(int **grid, int height);
 void _add(int **g, int w, int h, int l2);
-int _putchar(char c);
 void _puts(char *str);
 
 /**
@@ -244,17 +242,6 @@ void free_grid(int **grid, int height)
 		free(grid[i]);
 
 	free(grid);
-}
-/**
- * _putchar - writes the character c to stdout
- * @c: The character to print
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
 }
 /**
  * _puts - Prints a string, followed by a new line, to stdout.
