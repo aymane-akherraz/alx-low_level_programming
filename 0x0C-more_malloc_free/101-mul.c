@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include "main.h"
 
 int _isdigit(int c);
 int _strlen(char *s);
