@@ -19,7 +19,7 @@ void _puts(char *str);
 
 int main(int argc, char *argv[])
 {
-	int i, j;
+	int i, j, n1 = 0, n2 = 0;
 
 	if (argc != 3)
 	{
@@ -35,7 +35,22 @@ int main(int argc, char *argv[])
 				_puts("Error");
 				exit(98);
 			}
+			if (argv[i][j] == '0')
+				continue;
+			else
+			{
+				if (i == 1)
+					n1 = 1;
+				else
+					n2 = 1;
+			}
 		}
+	}
+	if (n1 == 0 || n2 == 0)
+	{
+		_putchar('0');
+		_putchar('\n');
+		return (0);
 	}
 	mul(argv[1], argv[2], _strlen(argv[1]), _strlen(argv[2]));
 	return (0);
