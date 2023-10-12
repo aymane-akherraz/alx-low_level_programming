@@ -9,7 +9,7 @@
 
 int main(int argc, char *argv[])
 {
-	int (*f)(int a, int b);
+	int (*f)(int, int);
 	int r, n1, n2;
 	char op;
 
