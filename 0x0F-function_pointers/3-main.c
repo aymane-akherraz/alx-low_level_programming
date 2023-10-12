@@ -9,7 +9,8 @@
 
 int main(int argc, char *argv[])
 {
-	int (*f)(int a, int b), r, n1, n2;
+	int (*f)(int a, int b);
+	int r, n1, n2;
 	char op;
 
 	if (argc != 4)
