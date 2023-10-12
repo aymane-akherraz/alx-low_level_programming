@@ -22,7 +22,7 @@ void print_all(const char * const format, ...)
 	va_start(args, format);
 
 	i = 0;
-	while (format[i] != '\0' && format != NULL)
+	while (format[i] && format)
 	{
 		j = 0;
 		while (fts[j].fs)
@@ -75,7 +75,7 @@ void pt_float(va_list a, char *sep)
 */
 void pt_str(va_list a, char *sep)
 {
-	char *str = va_arg(a, char*);
+	char *str = va_arg(a, char *);
 
 	if (str == NULL)
 	{
