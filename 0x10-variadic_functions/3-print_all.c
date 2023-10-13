@@ -22,7 +22,7 @@ void print_all(const char * const format, ...)
 	va_start(args, format);
 
 	i = 0;
-	while (format[i] && format)
+	while (format && format[i])
 	{
 		j = 0;
 		while (fts[j].fs)
@@ -31,6 +31,7 @@ void print_all(const char * const format, ...)
 			{
 				fts[j].f(args, sep);
 				sep = ", ";
+				break;
 			}
 			j++;
 		}
