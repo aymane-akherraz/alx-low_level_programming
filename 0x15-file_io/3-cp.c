@@ -12,7 +12,7 @@ void w_error(char *s);
 */
 int main(int ac, char **av)
 {
-	int fd, fd2, r = 1024, r2;
+	int fd, fd2, r, r2;
 	char buf[1024];
 
 	if (ac != 3)
@@ -30,7 +30,9 @@ int main(int ac, char **av)
 		fd2 = open(av[2], O_WRONLY | O_CREAT, 0664);
 		if (fd2 == -1)
 			w_error(av[2]);
+
 	}
+	r = read(fd, buf, 1024);
 	while (r)
 	{
 		if (r == -1)
