@@ -39,13 +39,11 @@ int main(int ac, char **av)
 			r_error(av[1]);
 
 		r2 = write(fd2, buf, r);
-		if (r2 != r)
+		if (r2 == -1)
 			w_error(av[2]);
 
 		r = read(fd, buf, 1024);
 	}
-	if (r == -1)
-		r_error(av[1]);
 	if (close(fd) == -1)
 		c_error(fd);
 
