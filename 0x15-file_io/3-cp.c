@@ -44,6 +44,8 @@ int main(int ac, char **av)
 
 		r = read(fd, buf, 1024);
 	}
+	if (r == -1)
+		r_error(av[1]);
 	if (close(fd) == -1)
 		c_error(fd);
 
