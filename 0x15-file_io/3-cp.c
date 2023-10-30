@@ -30,8 +30,8 @@ int main(int ac, char **av)
 
 	if (fd2 == -1)
 		w_error(av[2]);
-	r = read(fd, buf, 1024);
-	while (r)
+
+	while (r = read(fd, buf, 1024))
 	{
 		if (r == -1)
 			r_error(av[1]);
@@ -39,8 +39,6 @@ int main(int ac, char **av)
 		r2 = write(fd2, buf, r);
 		if (r2 != r)
 			w_error(av[2]);
-
-		r = read(fd, buf, 1024);
 	}
 	if (close(fd) == -1)
 		c_error(fd);
