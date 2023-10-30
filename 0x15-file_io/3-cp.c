@@ -24,14 +24,10 @@ int main(int ac, char **av)
 	if (fd == -1)
 		r_error(av[1]);
 
-	fd2 = open(av[2], O_WRONLY | O_TRUNC);
+	fd2 = open(av[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
 	if (fd2 == -1)
-	{
-		fd2 = open(av[2], O_WRONLY | O_CREAT, 0664);
-		if (fd2 == -1)
-			w_error(av[2]);
+		w_error(av[2]);
 
-	}
 	r = read(fd, buf, 1024);
 	while (r)
 	{
