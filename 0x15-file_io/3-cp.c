@@ -17,7 +17,7 @@ int main(int ac, char **av)
 
 	if (ac != 3)
 	{
-		dprintf(STDERR_FILENO, "Usage: cp %s %s\n", av[1], av[2]);
+		dprintf(STDERR_FILENO, "Usage: cp %s %s\n", "file_from", "file_to");
 		exit(97);
 	}
 	fd = open(av[1], O_RDONLY);
