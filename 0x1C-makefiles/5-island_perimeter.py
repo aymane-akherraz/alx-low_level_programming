@@ -8,10 +8,20 @@ def island_perimeter(grid):
             grid (list): A list of list of integers representing an island
     """
 
-    grid_h = len(grid) - 1
-    grid_w = len(grid[0]) - 1
-    isd_size = 0
+    grid_h = len(grid)
+    grid_w = len(grid[0])
 
+    col = None
+
+    for i in range(1, grid_h):
+        for j in range(1, grid_w):
+            if grid[i][j] == 1:
+                col = j
+                break
+        if col is not None:
+            break
+
+    isd_size = 0
     for i in range(1, grid_h):
         for j in range(1, grid_w):
             if grid[i][j] == 1:
