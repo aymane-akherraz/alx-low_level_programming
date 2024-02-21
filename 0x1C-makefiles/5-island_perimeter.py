@@ -16,7 +16,8 @@ def island_perimeter(grid):
         for j in range(1, grid_w):
             if grid[i][j] == 1:
                 isd_size += 1
-                if (grid[i - 1][j] == 1 and grid[i][j + 1] == 1):
+                if ((i - 1) >= 1 and (j + 1) < grid_w
+                        and grid[i - 1][j] == 1 and grid[i][j + 1] == 1):
                     isd_size += 1
                     break
 
