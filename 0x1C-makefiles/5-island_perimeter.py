@@ -10,21 +10,14 @@ def island_perimeter(grid):
 
     grid_h = len(grid)
     grid_w = len(grid[0])
-    col = None
+    p = 0
 
-    for i in range(1, grid_h):
-        for j in range(1, grid_w):
+    for i in range(grid_h):
+        for j in range(grid_w):
             if grid[i][j] == 1:
-                col = j
-                break
-        if col is not None:
-            break
-
-    isd_size = 0
-    for i in range(1, grid_h):
-        for j in range(1, grid_w):
-            if grid[i][j] == 1 and j == col:
-                isd_size += 1
-                break
-
-    return 4 * isd_size
+                p += 4
+                if j > 0 and grid[i][j - 1] == 1:
+                    p -= 2
+                if i > 0 and grid[i - 1][j] == 1:
+                    p -= 2
+    return p
